@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+    <p>Edit Flashcard</p>
+    <mat-form-field>
+      <input placeholder="data.question" matInput [(ngModel)]="data.question">
+      <input placeholder="data.answer"matInput [(ngModel)]="data.answer">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Exit</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save Changes</button>
+  </div>

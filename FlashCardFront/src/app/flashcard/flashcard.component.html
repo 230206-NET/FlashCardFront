@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Card {{cardData.id}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+    <div *ngIf="questionUp; else answerUp">
+        <p>Question: {{cardData.question}}</p>
+    </div>
+    <ng-template #answerUp><p>Answer: {{cardData.answer}}</p></ng-template>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="flipCard()">Flip Card</button>
+    </mat-card-actions>
+  </mat-card>

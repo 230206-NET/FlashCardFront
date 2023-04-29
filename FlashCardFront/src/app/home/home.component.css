@@ -1,0 +1,26 @@
+.left {
+    position: absolute;
+  left: 0px;
+  width: 50%;
+  }
+
+.right-half {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+}
+
+article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+  }
+
+
+.container {
+    display: table;
+    width: 100%;
+} 

@@ -1,0 +1,27 @@
+  <div *ngIf="tableMode; else table">
+    <div class="rectangle">
+      <app-flashcard *ngFor="let card of cardList" [cardData]="card"></app-flashcard>
+    </div>
+  </div>
+<ng-template #table>
+  <div class="table">
+  <table border=1 rules=rows style="width: 100%;">
+    <thead style="border: 1px solid black;">
+      <th style="text-align: center;">Question</th>
+      <th style="text-align: center;">Answer</th>
+      <th style="text-align: center;">Options</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let card of cardList">
+        <td style="text-align: center;">{{card.question}}</td>
+        <td style="text-align: center;">{{card.answer}}</td>
+        <td><button (click)="editDialog(card.id)">Edit</button></td>
+        <td><button (click)="deleteCard(card.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</ng-template>
+
+<button (click)="openDialog()">Add New Card</button>
+<button (click)="toggleView()">Toggle View</button>

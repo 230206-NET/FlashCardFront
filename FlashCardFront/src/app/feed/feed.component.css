@@ -1,0 +1,16 @@
+.rectangle {
+    max-width: 35%;
+    max-height: 90%;
+    border: 1px solid black;
+    margin: 0 auto 0 5%;
+}
+
+.example-card{
+    max-width: 400px;
+    margin: 0 auto 5%;
+}
+
+.table{
+    max-width: 80%;
+    margin: 0 auto;
+}
